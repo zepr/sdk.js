@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<title>SDK.js | Générateur de sudokus</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<link rel="stylesheet" type="text/css" href="styles/sdk.css" />
+	<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"/>
+	<script type="text/javascript" src="scripts/jspdf.min.js"></script>	
+	<script type="text/javascript" src="scripts/sdk.js"></script>
+</head>
+<body>
+	<div class="container">
+    <header>
+      <h1>SDK.js</h1>
+      <h2>Un simple générateur de sudokus</h2>
+		</header>
+		<section>
+			<h2>Qu'est-ce que c'est?</h2>
+			<div>SDK.js permet de générer un sudoku en JavaScript, directement depuis le navigateur.</div>
+			<div>il est possible de définir une clé : pour une valeur donnée, SDK.js génère toujours le même sudoku. La clé peut être n'importe quelle chaîne de caractères ("Hello!", "Toto32", etc...).
+			<div>Si vous n'avez pas d'inspiration, une clé aléatoire est utilisée...</div>
+			<form>
+				<input id="key" name="key" type="text" placeholder="Saisir une clé" />
+				<input id="gen" type="submit" value="Générer" />
+			</form>
+		</section>
+		<section>
+			<h2>Sudoku</h2>
+			<div id="ongen">Rien à voir pour le moment... Cliquez sur le bouton "Générer" ci-dessus pour remplir la grille.</div>
+			<canvas id="sudoku"></canvas>
+		</section>
+		<section id="formpdf">
+			<h2>Sous forme de PDF?</h2>
+			<div>Ce sudoku est téléchargeable sous forme de PDF</div>
+			<form>
+				<input id="pdf" type="submit" value="Générer PDF"/>
+			</form>
+			<div>Ainsi que sa solution. Inutile de l'imprimer tout de suite : en cas de blocage, vous pouvez revenir plus tard, saisir la clé et vérifier le résultat</div>
+			<form>
+				<input id="sol" type="submit" value="Solution"/>
+			</form>			
+		</section>
+		<section>
+			<h2>Téléchargement</h2>
+			<div>SDK.js est un petit challenge personnel réalisé en quelques heures. Sous sa forme actuelle, il est (très) largement améliorable.</div>
+			<div>Il est mis à disposition des intrépides sur <a href="https://github.com/zepr/sdk.js">Github</a>, sous licence <a href="https://opensource.org/licenses/GPL-3.0">GPLv3</a>.</div>
+			<div>Les fichiers PDF sont réalisés avec <a href="https://github.com/MrRio/jsPDF">jsPDF</a>, outil open-source publié sous licence <a hre="https://opensource.org/licenses/MIT">MIT</a> réalisé par <a href="https://github.com/MrRio">James Hall</a> (Mr Rio)
+		</section>
+	</div>
+</body>
